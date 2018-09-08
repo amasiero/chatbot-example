@@ -36,8 +36,10 @@ function callBot(message) {
 	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xhr.addEventListener("load", function() {
 		if (xhr.status == 200) {
-			var resposta = JSON.parse(xhr.responseText);
-			createMessage(resposta.bot[resposta.bot.length - 1], "bot", true);
+			var respostas = JSON.parse(xhr.responseText);
+			respostas.forEach(function (resposta) { 
+				createMessage(resposta, "bot", true);
+			});
 		} else {
 			console.log(xhr.status);
 			console.log(xhr.responseText);

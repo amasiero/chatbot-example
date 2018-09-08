@@ -2,6 +2,8 @@ package com.andreymasiero.chatbot.web;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletException;
@@ -31,22 +33,23 @@ public class MessageServlet extends HttpServlet{
 		MessageResponse response = this.conversationAPI(message, context);
 		Chat chat = new Chat();
 		chat.addUserMessage(message);
-		chat.addBotMessage(response.getOutput().getText().get(0));
+		for(String text : response.getOutput().getText()) {
+			chat.addBotMessage(text);
+		}
 		context = response.getContext();
 		resp.setContentType("application/json");
-		resp.getWriter().write(new Gson().toJson(chat.getChat()));
+		resp.getWriter().write(new Gson().toJson(response.getOutput().getText()));
 	}
 	
 	private MessageResponse conversationAPI(String input,Map context){
-		Conversation service = new Conversation("2017-02-03");
-		//service.setApiKey("duYeDMHQMeROhz0AF0tAv0-bmW9iBKcIkja3r91Ojevn");
-		service.setUsernameAndPassword("5d1b2e46-8836-4260-a163-7d7844383de8", "PJTsAUqUfHEf");
+		Conversation service = new Conversation("2018-09-07"); // Data que o workspace foi criado
+		service.setUsernameAndPassword("fb72b2fa-5e15-42b1-9046-7e7ab4fb0bc7", "OWOb8XFsJKdc");
 		InputData inputData = new InputData.Builder().text(input).build();
 		MessageRequest newMessage = new MessageRequest();
 		newMessage.setInput(inputData);
-		String workspaceId = "3efa7301-f199-46e6-a999-a3e167faa97a";
+		String workspaceId = "bb47bb89-d142-4dec-9c41-ecdfd4fbb630";
 		MessageOptions options = new MessageOptions.Builder(workspaceId).input(inputData).build();
-		MessageResponse response = service. message(options).execute();
+		MessageResponse response = service.message(options).execute();
 		return response;
 	} 
 
