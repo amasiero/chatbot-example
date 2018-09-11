@@ -21,52 +21,49 @@ body {
 	border: 0;
 	border-bottom: 2px #fff solid;
 	color: #fff;
-	background: #515151;
+	background: #262626;
+}
+
+.field:focus {
+	outline: none;
 }
 
 .chatbot {
 	margin: 10px 40px;
-	padding: 10px 15px;
+	padding: 10px;
 	background: #214BB5;
 	color: white;
-	width: 200px;
+	min-width: 50%;
 	border-radius: 6px;
-	box-shadow: 0.05em 0.05em black;
 	float: left;
 }
 
 .chatuser {
 	margin: 10px 40px;
-	padding: 10px 15px;
+	padding: 10px;
 	background: #EEE7E0;
 	color: black;
-	width: 200px;
+	min-width: 50%;
 	border-radius: 6px;
 	float: right;
-	box-shadow: 0.05em 0.05em black;
-	text-align: right;
+	text-align: left;
 }
 
 .iconbot {
 	background: #EEE7E0;
 	border-radius: 50%;
-	border: 4px #214BB5 solid;
-	margin-left: -40px;
-	margin-right: 10px;
+	margin: 0 10px 0 -45px;
 	float: left;
-	box-shadow: 0.05em 0.05em black;
+	vertical-align: middle;
 }
 
 .iconuser {
 	background: #EEE7E0;
 	border-radius: 50%;
-	border: 4px #214BB5 solid;
-	margin-left: 10px;
-	margin-right: -40px;
+	margin: 0 -45px 0 10px;
 	float: right;
-	box-shadow: 0.05em 0.05em black;
 }
-
+ 
 h2 {
 	text-align: center;
 	color: #fff;
@@ -99,7 +96,6 @@ button:hover {
 	height: 300px;
 	background: #fff;
 	color: #262626;
-	text-transform: uppercase;
 	font-size: 14px;
 	font-family: verdana;
 	overflow: scroll;

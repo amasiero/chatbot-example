@@ -2,8 +2,6 @@ package com.andreymasiero.chatbot.web;
 
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletException;
@@ -42,7 +40,7 @@ public class MessageServlet extends HttpServlet{
 	}
 	
 	private MessageResponse conversationAPI(String input,Map context){
-		Conversation service = new Conversation("2018-09-07"); // Data que o workspace foi criado
+		Conversation service = new Conversation("2018-07-10"); // Data que o workspace foi criado
 		service.setUsernameAndPassword("fb72b2fa-5e15-42b1-9046-7e7ab4fb0bc7", "OWOb8XFsJKdc");
 		InputData inputData = new InputData.Builder().text(input).build();
 		MessageRequest newMessage = new MessageRequest();
@@ -54,3 +52,11 @@ public class MessageServlet extends HttpServlet{
 	} 
 
 }
+
+
+
+
+
+
+
+
