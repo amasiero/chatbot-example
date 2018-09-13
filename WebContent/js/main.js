@@ -8,7 +8,7 @@ btnSend.addEventListener("click", function(event) {
 	event.preventDefault();
 	
 	var question = document.querySelector("#question");
-	createMessage(question.value, "user");
+	createMessage(question.value, "me");
 	
 	callBot(question.value); 
 	
@@ -52,11 +52,13 @@ function callBot(message) {
 
 function createDiv(text, type) {
 	var div = document.createElement("div");
-	var img = createImage(type);
-	var p = createText(text);
-	div.classList.add("chat" + type);
-	div.appendChild(img);
-	div.appendChild(p);
+	//var img = createImage(type);
+	//var p = createText(text);
+	div.classList.add("chat");
+	div.classList.add(type);
+	//div.appendChild(img);
+	//div.appendChild(p);
+	div.textContent = text;
 	return div;
 }
 

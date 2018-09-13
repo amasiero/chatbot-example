@@ -28,40 +28,57 @@ body {
 	outline: none;
 }
 
-.chatbot {
-	margin: 10px 40px;
-	padding: 10px;
-	background: #214BB5;
-	color: white;
-	min-width: 50%;
-	border-radius: 6px;
-	float: left;
+.chat {
+	border-radius: 5px;
+	box-shadow: 0 0 6px #B2B2B2;
+	display: inline-block;
+	padding: 10px 18px;
+	position: relative;
+	vertical-align: top;
 }
 
-.chatuser {
-	margin: 10px 40px;
-	padding: 10px;
+.bot {
+	background: #3395d6;
+	color: white;
+	float: left;
+	margin: 5px 20px 5px 45px;
+}
+
+.bot::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-right-color: #3395d6;
+	border-left: 0;
+	border-top: 0;
+	margin-top: -10px;
+	margin-left: -20px;
+}
+
+.me {
 	background: #EEE7E0;
 	color: black;
-	min-width: 50%;
-	border-radius: 6px;
 	float: right;
-	text-align: left;
+	margin: 5px 45px 5px 20px;
 }
 
-.iconbot {
-	background: #EEE7E0;
-	border-radius: 50%;
-	margin: 0 10px 0 -45px;
-	float: left;
-	vertical-align: middle;
-}
-
-.iconuser {
-	background: #EEE7E0;
-	border-radius: 50%;
-	margin: 0 -45px 0 10px;
-	float: right;
+.me::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-left-color: #EEE7E0;
+	border-right: 0;
+	border-top: 0;
+	margin-top: -10px;
+	margin-right: -20px;
 }
  
 h2 {
