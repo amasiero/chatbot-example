@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8" />
 <title>ChatBot Example w/ Watson and JSP</title>
+<link rel="icon" href="favicon.png">
 <link rel="stylesheet" type="text/css" href="css/index.css" />
 </head>
 <body>

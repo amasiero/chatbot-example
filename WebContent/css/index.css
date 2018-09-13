@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	background: #262626;
+	background:#262626;
 }
 
 .center {
@@ -44,7 +44,7 @@ body {
 	margin: 5px 20px 5px 45px;
 }
 
-.bot::after {
+.bot:after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -66,7 +66,7 @@ body {
 	margin: 5px 45px 5px 20px;
 }
 
-.me::after {
+.me:after {
 	content: '';
 	position: absolute;
 	right: 0;
