@@ -1,2 +1,2 @@
 # chatbot-example
-An example of watson chatbor using java-sdk
+An example of watson chatbot using java-sdk
